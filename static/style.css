@@ -1,0 +1,145 @@
+/* Resetting the styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background and Page Layout */
+body {
+    background: linear-gradient(135deg, #6e7dff, #ff85b4);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0; /* Remove any padding from body */
+    margin: 0;  /* Remove any margin from body */
+    overflow: auto; /* Allow page to scroll */
+    background-color: #0d0f10;
+    padding: 0 10px;
+}
+
+/* Styling for the heading */
+.heading {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 50px; /* Larger text for prominence */
+    font-weight: normal; /* We don't need bold here, Lobster is thick enough */
+    color: #0baad6; /* Tomato red for an eye-catching color */
+    text-align: center; /* Centers the heading */
+    letter-spacing: 3px; /* Adds spacing between letters */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+    margin-top: 50px; /* Adds space above the heading */
+    text-transform: uppercase; /* Makes the text uppercase */
+}
+
+/* Centered Form Box with Scrollability */
+.wrapper {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.125);
+    margin-top: 10px; /* Small margin to prevent it from sticking to the top */
+    max-height: 80vh; /* Maximum height for form */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Title styling */
+.wrapper .title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Input field container */
+.wrapper .form .inputfield {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Label Styling */
+.wrapper .form .inputfield label {
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Input Styling */
+.wrapper .form .inputfield .input, .wrapper .form .inputfield .custom_select select {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+    width: 100%; /* Ensure inputs are responsive */
+}
+
+/* Focus State for Inputs */
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .custom_select select:focus {
+    border-color: #6e7dff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(110, 125, 255, 0.5);
+}
+
+/* Button Styling */
+.wrapper .form .inputfield .btn {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #6e7dff, #ff85b4);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Button takes full width */
+}
+
+/* Hover State for Button */
+.wrapper .form .inputfield .btn:hover {
+    background: linear-gradient(135deg, #ff85b4, #6e7dff);
+    transform: translateY(-3px);
+}
+
+/* Result Text */
+.result p {
+    text-align: center;
+    font-size: 20px;
+    color: #6e7dff;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Ensure the result stays well-positioned */
+.result {
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 25px;
+    }
+
+    .wrapper .title {
+        font-size: 24px;
+    }
+
+    .wrapper .form .inputfield label {
+        font-size: 14px;
+    }
+
+    .wrapper .form .inputfield .btn {
+        font-size: 16px;
+    }
+}
